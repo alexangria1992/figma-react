@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import image from '../assets/hero.png';
 import bg from '../assets/bg.png';
 import Tilt from "react-tilt";
+import HeroText from './HeroText';
 
 const Hero = () => {
     return (
@@ -10,7 +11,7 @@ const Hero = () => {
             <Wrapper>
                 <InnerWrapper>
                     <Left>
-                        <h1>Hero</h1>
+                        <HeroText/>      
                     </Left>
                     <TiltWrapper options={{max : 25}}>
                         <img src={image} alt=""/>
@@ -26,7 +27,7 @@ export default Hero
 const TiltWrapper = styled(Tilt)`
     width: 60%;
     @media (max-width: 670px){
-        width: 100%;
+        display: none;
     }
 
 `;
